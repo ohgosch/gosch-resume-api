@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "skills_sections",
+  "info": {
+    "singularName": "skills-section",
+    "pluralName": "skills-sections",
+    "displayName": "Skills Section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "skills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skill.skill"
+    },
+    "skill_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skill-category.skill-category"
+    }
+  }
+}

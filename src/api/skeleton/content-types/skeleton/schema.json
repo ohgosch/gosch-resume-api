@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "skeletons",
+  "info": {
+    "singularName": "skeleton",
+    "pluralName": "skeletons",
+    "displayName": "Skeleton",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "linkedin": {
+      "type": "string",
+      "required": true
+    },
+    "github": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
