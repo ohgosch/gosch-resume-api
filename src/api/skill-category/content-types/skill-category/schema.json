@@ -4,15 +4,25 @@
   "info": {
     "singularName": "skill-category",
     "pluralName": "skill-categories",
-    "displayName": "Skill Category"
+    "displayName": "Skill Category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

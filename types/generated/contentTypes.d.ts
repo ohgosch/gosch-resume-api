@@ -1038,8 +1038,18 @@ export interface ApiSkillSkill extends Schema.CollectionType {
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    name: Attribute.String;
+    name: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     skill_category: Attribute.Relation<
       'api::skill.skill',
       'oneToOne',
@@ -1059,6 +1069,12 @@ export interface ApiSkillSkill extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::skill.skill',
+      'oneToMany',
+      'api::skill.skill'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1068,12 +1084,23 @@ export interface ApiSkillCategorySkillCategory extends Schema.CollectionType {
     singularName: 'skill-category';
     pluralName: 'skill-categories';
     displayName: 'Skill Category';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    name: Attribute.String;
+    name: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1088,6 +1115,12 @@ export interface ApiSkillCategorySkillCategory extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::skill-category.skill-category',
+      'oneToMany',
+      'api::skill-category.skill-category'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1101,6 +1134,11 @@ export interface ApiSkillsSectionSkillsSection extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     skills: Attribute.Relation<
@@ -1127,6 +1165,12 @@ export interface ApiSkillsSectionSkillsSection extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::skills-section.skills-section',
+      'oneToMany',
+      'api::skills-section.skills-section'
+    >;
+    locale: Attribute.String;
   };
 }
 
