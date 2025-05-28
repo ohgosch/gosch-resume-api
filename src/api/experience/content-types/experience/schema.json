@@ -95,6 +95,14 @@
       "type": "uid",
       "targetField": "company",
       "required": true
+    },
+    "description_rich": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
