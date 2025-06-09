@@ -537,6 +537,7 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    skills: Schema.Attribute.Relation<'oneToMany', 'api::skill.skill'>;
     slug: Schema.Attribute.UID<'company'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -648,6 +649,10 @@ export interface ApiSkillSkill extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    experience: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::experience.experience'
+    >;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::skill.skill'>;
     name: Schema.Attribute.String &

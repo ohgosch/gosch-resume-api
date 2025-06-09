@@ -28,6 +28,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::skill-category.skill-category"
+    },
+    "experience": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::experience.experience",
+      "inversedBy": "skills"
     }
   }
 }
