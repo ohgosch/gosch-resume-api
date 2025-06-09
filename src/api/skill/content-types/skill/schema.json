@@ -29,9 +29,9 @@
       "relation": "oneToOne",
       "target": "api::skill-category.skill-category"
     },
-    "experience": {
+    "experiences": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::experience.experience",
       "inversedBy": "skills"
     }

@@ -106,9 +106,9 @@
     },
     "skills": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::skill.skill",
-      "mappedBy": "experience"
+      "mappedBy": "experiences"
     }
   }
 }
