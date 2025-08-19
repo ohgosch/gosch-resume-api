@@ -373,6 +373,46 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCompanyCoverLetterCompanyCoverLetter
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'company_cover_letters';
+  info: {
+    description: '';
+    displayName: 'Company Cover Letter';
+    pluralName: 'company-cover-letters';
+    singularName: 'company-cover-letter';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    company: Schema.Attribute.String & Schema.Attribute.Required;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3ODcwOTc1OTksImp0aSI6Ijc4YzJlYzU1LTAyZGMtNDk0Ny05MTA5LWI4OTgyMjZlZmNlOSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJ2YyI6IjQ1M2I0MjcyIn0.hFGKbYCDLAobJ5Q4XW9h27TCBa8N3Mzf3fYqiaXIikUbczizAzqD-Wt2ZOcK3gXZMTIH6pmT0mE3pR42FYPhoQ';
+          output: 'HTML';
+          preset: 'light';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::company-cover-letter.company-cover-letter'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
   collectionName: 'courses';
   info: {
@@ -1279,6 +1319,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::company-cover-letter.company-cover-letter': ApiCompanyCoverLetterCompanyCoverLetter;
       'api::course.course': ApiCourseCourse;
       'api::cover-letter.cover-letter': ApiCoverLetterCoverLetter;
       'api::experience.experience': ApiExperienceExperience;
