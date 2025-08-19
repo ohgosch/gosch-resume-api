@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "company_cover_letters",
+  "info": {
+    "singularName": "company-cover-letter",
+    "pluralName": "company-cover-letters",
+    "displayName": "Company Cover Letter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light",
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3ODcwOTc1OTksImp0aSI6Ijc4YzJlYzU1LTAyZGMtNDk0Ny05MTA5LWI4OTgyMjZlZmNlOSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJ2YyI6IjQ1M2I0MjcyIn0.hFGKbYCDLAobJ5Q4XW9h27TCBa8N3Mzf3fYqiaXIikUbczizAzqD-Wt2ZOcK3gXZMTIH6pmT0mE3pR42FYPhoQ"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}
