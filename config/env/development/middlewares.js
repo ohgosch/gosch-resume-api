@@ -7,10 +7,10 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:"],
+          "connect-src": ["'self'", "https:", "https://proxy-event.ckeditor.com"],
           "img-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
           "media-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
-          'script-src': ['https://cdn.ckeditor.com'],
+          "script-src": ['https://cdn.ckeditor.com'],
           upgradeInsecureRequests: null,
         },
       },
