@@ -93,6 +93,12 @@
           "localized": true
         }
       }
+    },
+    "experiences_limit": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 4
     }
   }
 }

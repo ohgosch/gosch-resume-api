@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-08-19T15:25:25.013Z"
+    "x-generation-date": "2025-09-08T21:08:39.339Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -6400,7 +6400,8 @@
               "company",
               "role",
               "startDate",
-              "slug"
+              "slug",
+              "based_in"
             ],
             "type": "object",
             "properties": {
@@ -6457,6 +6458,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "based_in": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -6520,7 +6524,8 @@
           "company",
           "role",
           "startDate",
-          "slug"
+          "slug",
+          "based_in"
         ],
         "properties": {
           "id": {
@@ -7418,6 +7423,9 @@
                           }
                         }
                       },
+                      "based_in": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -7526,6 +7534,9 @@
               }
             }
           },
+          "based_in": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -7601,7 +7612,8 @@
               "linkedin",
               "github",
               "phone",
-              "name"
+              "name",
+              "experiences_limit"
             ],
             "type": "object",
             "properties": {
@@ -7631,6 +7643,9 @@
                 "type": "string"
               },
               "languages": {},
+              "experiences_limit": {
+                "type": "integer"
+              },
               "locale": {
                 "type": "string"
               },
@@ -7693,7 +7708,8 @@
           "linkedin",
           "github",
           "phone",
-          "name"
+          "name",
+          "experiences_limit"
         ],
         "properties": {
           "id": {
@@ -7728,6 +7744,9 @@
             "type": "string"
           },
           "languages": {},
+          "experiences_limit": {
+            "type": "integer"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -8054,6 +8073,9 @@
                   "type": "string"
                 },
                 "languages": {},
+                "experiences_limit": {
+                  "type": "integer"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -9021,6 +9043,9 @@
                       }
                     }
                   }
+                },
+                "based_in": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",
@@ -10422,6 +10447,9 @@
                             }
                           }
                         }
+                      },
+                      "based_in": {
+                        "type": "string"
                       },
                       "createdAt": {
                         "type": "string",
