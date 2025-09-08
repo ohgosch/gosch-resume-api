@@ -14,7 +14,7 @@
     "@ckeditor/strapi-plugin-ckeditor": "^1.1.1",
     "@strapi/plugin-cloud": "5.13.1",
     "@strapi/plugin-documentation": "^5.22.0",
-    "@strapi/plugin-users-permissions": "5.13.1",
+    "@strapi/plugin-users-permissions": "5.23.3",
     "@strapi/provider-upload-cloudinary": "^4.24.3",
     "@strapi/strapi": "5.13.1",
     "better-sqlite3": "11.3.0",
