@@ -109,6 +109,15 @@
       "relation": "manyToMany",
       "target": "api::skill.skill",
       "mappedBy": "experiences"
+    },
+    "based_in": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     }
   }
 }

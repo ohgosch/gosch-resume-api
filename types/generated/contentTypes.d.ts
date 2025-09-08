@@ -521,6 +521,13 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    based_in: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     company: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -639,6 +646,15 @@ export interface ApiSkeletonSkeleton extends Struct.SingleTypeSchema {
           localized: false;
         };
       }>;
+    experiences_limit: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<4>;
     github: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
