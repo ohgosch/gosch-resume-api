@@ -15,7 +15,7 @@
     "@strapi/plugin-cloud": "5.23.3",
     "@strapi/plugin-documentation": "^5.22.0",
     "@strapi/plugin-users-permissions": "5.23.3",
-    "@strapi/provider-upload-cloudinary": "^4.24.3",
+    "@strapi/provider-upload-cloudinary": "^5.25.0",
     "@strapi/strapi": "5.23.3",
     "better-sqlite3": "12.2.0",
     "pg": "^8.11.5",
