@@ -13,7 +13,7 @@
   "dependencies": {
     "@ckeditor/strapi-plugin-ckeditor": "^1.1.1",
     "@strapi/plugin-cloud": "5.23.3",
-    "@strapi/plugin-documentation": "^5.22.0",
+    "@strapi/plugin-documentation": "^5.30.0",
     "@strapi/plugin-users-permissions": "5.30.0",
     "@strapi/provider-upload-cloudinary": "^5.30.0",
     "@strapi/strapi": "5.30.0",
