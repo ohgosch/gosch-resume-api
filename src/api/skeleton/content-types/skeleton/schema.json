@@ -26,39 +26,39 @@
     },
     "linkedin": {
       "type": "string",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "required": true
     },
     "github": {
       "type": "string",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "required": true
     },
     "phone": {
       "type": "string",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "required": true
     },
     "name": {
       "type": "string",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "title": {
       "type": "string",
@@ -78,27 +78,42 @@
     },
     "description": {
       "type": "text",
-      "maxLength": 155,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
-    },
-    "languages": {
-      "type": "blocks",
-      "required": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      },
+      "maxLength": 155
     },
     "experiences_limit": {
       "type": "integer",
-      "min": 0,
       "required": true,
-      "default": 4
+      "default": 4,
+      "min": 0
+    },
+    "about": {
+      "type": "customField",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "options": {
+        "output": "HTML",
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3ODcwOTc1OTksImp0aSI6Ijc4YzJlYzU1LTAyZGMtNDk0Ny05MTA5LWI4OTgyMjZlZmNlOSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJ2YyI6IjQ1M2I0MjcyIn0.hFGKbYCDLAobJ5Q4XW9h27TCBa8N3Mzf3fYqiaXIikUbczizAzqD-Wt2ZOcK3gXZMTIH6pmT0mE3pR42FYPhoQ",
+        "preset": "light"
+      },
+      "required": true
+    },
+    "languages": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": false
     }
   }
 }
