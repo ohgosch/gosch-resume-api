@@ -2286,13 +2286,13 @@
     "@strapi/utils" "5.30.0"
     sendmail "^1.6.1"
 
-"@strapi/provider-upload-cloudinary@^5.30.0":
-  version "5.30.0"
-  resolved "https://registry.yarnpkg.com/@strapi/provider-upload-cloudinary/-/provider-upload-cloudinary-5.30.0.tgz#738952bdfa0654f7a4971de25f9b41a3671dcdc7"
-  integrity sha512-lO5iklu7xeKII5LY6UI7gLdFz+WdePzDF2h4Y0Z8tZsvHT5SKJsjUWh55mQ5bwcvXCrBKEvPDydi+4hK4233sw==
+"@strapi/provider-upload-cloudinary@^5.31.2":
+  version "5.31.2"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-upload-cloudinary/-/provider-upload-cloudinary-5.31.2.tgz#b382ad78484e41cdde796ce7244338069a677494"
+  integrity sha512-tBTzsdS7fL7KLIok/wshZdO+sxJREIf7SpgBlFKskt1/pxLwecGm3DLd53LDJIzoQDbl/s1V+wLrVvQrgxPFoA==
   dependencies:
-    "@strapi/utils" "5.30.0"
-    cloudinary "^1.41.0"
+    "@strapi/utils" "5.31.2"
+    cloudinary "^2.7.0"
     into-stream "^5.1.0"
 
 "@strapi/provider-upload-local@5.30.0":
@@ -2512,6 +2512,22 @@
   version "5.30.0"
   resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-5.30.0.tgz#5e33713480d63efd2d5e265037d7cf38d4930069"
   integrity sha512-LIkHyjd5hmtNk/Td/wXZCfXY+3iWH/jZGW4zIkIi8NFloydrFbg1ZVdDDPUh/MOmuqk9KESuHESFq0IviMf76Q==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    date-fns "2.30.0"
+    execa "5.1.1"
+    http-errors "2.0.0"
+    lodash "4.17.21"
+    node-machine-id "1.1.12"
+    p-map "4.0.0"
+    preferred-pm "3.1.2"
+    yup "0.32.9"
+    zod "3.25.67"
+
+"@strapi/utils@5.31.2":
+  version "5.31.2"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-5.31.2.tgz#96fa7260c20560e85b2500205ee110da568a0e3d"
+  integrity sha512-iHJyBYtTl/csW94PiNKP7ijqH3Z21z2SIsc99TDqBjeZH3eGIkg2LwWjxMARwhq5FbmI8HPmDGelLZJNLjxnDA==
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
     date-fns "2.30.0"
@@ -4070,18 +4086,11 @@ clone@^1.0.2:
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==
 
-cloudinary-core@^2.13.0:
-  version "2.13.1"
-  resolved "https://registry.yarnpkg.com/cloudinary-core/-/cloudinary-core-2.13.1.tgz#7abb62bf1db41773acfe1eebb7fd40571c34495b"
-  integrity sha512-z53GPNWnvU0Zi+ns8CIVbZBfj7ps/++zDvwIyiFuq5p1MoK+KUCg0k5mBceDDHTnx1gHmHUd9aohS+gDxPNt6w==
-
-cloudinary@^1.41.0:
-  version "1.41.3"
-  resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.41.3.tgz#dc96725122099349adba6ab4eccda84fa13e8c2e"
-  integrity sha512-4o84y+E7dbif3lMns+p3UW6w6hLHEifbX/7zBJvaih1E9QNMZITENQ14GPYJC4JmhygYXsuuBb9bRA3xWEoOfg==
+cloudinary@^2.7.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-2.8.0.tgz#9b191995bc2d72d4487062251e95d0b88dbba1cb"
+  integrity sha512-s7frvR0HnQXeJsQSIsbLa/I09IMb1lOnVLEDH5b5E53WTiCYgrNNOBGV/i/nLHwrcEOUkqjfSwP1+enXWNYmdw==
   dependencies:
-    cloudinary-core "^2.13.0"
-    core-js "^3.30.1"
     lodash "^4.17.21"
     q "^1.5.1"
 
@@ -4330,11 +4339,6 @@ core-js-pure@^3.23.3:
   version "3.37.0"
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.37.0.tgz#ce99fb4a7cec023fdbbe5b5bd1f06bbcba83316e"
   integrity sha512-d3BrpyFr5eD4KcbRvQ3FTUx/KWmaDesr7+a3+1+P46IUnNoEt+oiLijPINZMEon7w9oGkIINWxrBAU9DEciwFQ==
-
-core-js@^3.30.1:
-  version "3.37.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.37.0.tgz#d8dde58e91d156b2547c19d8a4efd5c7f6c426bb"
-  integrity sha512-fu5vHevQ8ZG4og+LXug8ulUtVxjOcEYvifJr7L5Bfq9GOztVqsKd9/59hUk2ZSbCrS3BqUr3EpaYGIYzq7g3Ug==
 
 core-util-is@^1.0.2, core-util-is@~1.0.0:
   version "1.0.3"
