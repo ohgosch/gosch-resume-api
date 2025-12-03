@@ -2,7 +2,7 @@
   "name": "gosch-resume-api",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "A headless CMS backend built with Strapi 5, providing multilingual resume data through a RESTful API",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -25,7 +25,7 @@
     "styled-components": "^6.1.19"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Ricardo Gosch"
   },
   "strapi": {
     "uuid": "03c3b95b-be29-46fb-a601-ba076de0eb08"
